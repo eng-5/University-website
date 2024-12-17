@@ -1,0 +1,27 @@
+footer{
+    background-color: var(--bg-tint);
+    font-size: 1.2rem;
+    .footer{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding:1.3rem 2rem;
+        border-top:1px solid rgba(120, 120, 120, 0.7);
+        
+        ul{
+            display:flex;
+            gap:3rem;
+
+            li{
+                cursor:pointer;
+            }
+        }
+    }
+    
+}
+@media(max-width:580px){
+    footer{
+        font-size:1.5rem;
+    }
+}

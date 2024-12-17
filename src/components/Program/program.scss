@@ -1,0 +1,99 @@
+.program{
+    text-align: center;
+    padding:var(--general-side-padding);
+    padding-top:6rem;
+    background-color: var(--bg-tint);
+    color: var(--color-black);
+    &__content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program__heading{
+        h3{
+            font-weight: 600;
+            font-size:1.6rem;
+        }
+        h2{
+            font-size:3.1rem;
+        }
+    }
+    .program__image{
+        display:flex;
+        gap:2.5rem;
+        padding:6rem 6rem 15rem;
+        position:relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transition: all 2s ease-in-out;
+        &-1{
+          background-image: url('../../assets/person1.jpg');  
+        }
+        &-2{
+            background-image: url('../../assets/person2.jpg'); 
+        }
+        &-3{
+            background-image: url('../../assets/person3.jpg'); 
+        }
+    }
+}
+.image__card{
+    position: relative;
+    border-radius: 1.5rem;
+    overflow:hidden;
+    box-shadow:.1rem .2rem 1rem #a4a4a4ad;
+    height:30vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    color:var(--color-white);
+&>*{
+    transform: translateY(12rem);
+    transition: all .4s ease-in-out;
+    opacity:0;
+    z-index: 1000;
+}
+
+ &::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(66, 66, 66, 0.34);
+    opacity:0;
+    transition: all .4s ease-in-out;
+ }
+ &:hover::after,
+ &:hover>*{
+    opacity:1;
+    transform: translateY(0);
+ }
+}
+@media(max-width:580px){
+    .program{
+        padding-top:7rem;
+        
+        .program__image{
+            display:flex;
+            gap:7rem;
+            flex-direction: column;
+        
+        }
+    }
+    .image__card{
+        flex:none;
+        height:70vw;
+        width:85%;
+        font-size:2.5rem;
+        text-align: center;
+    }
+}

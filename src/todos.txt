@@ -1,0 +1,4 @@
+1. make the website completely responsive by removing the nav and putting the clickable nav done
+2. add react icons (done)
+3. finish up email sending with emailjs
+4. design the click action on the testimonials (done)

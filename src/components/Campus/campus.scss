@@ -1,0 +1,80 @@
+.campus{
+    text-align: center;
+    padding-top:1rem;
+    padding-bottom:1.5rem;
+    background-color: var(--bg-tint);
+    color: var(--color-black);
+    &__content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campus__heading{
+        h3{
+            font-weight: 600;
+            font-size:1.5rem;
+        }
+        h2{
+            font-size:3rem;
+        }
+    }
+    .campus__image{
+        display:flex;
+        gap:2rem;
+        padding:6rem 6rem 5.5rem;
+        width: 100%;
+        &-1{
+          background-image: url('../../assets/person5.jpg');
+          background-position: center center; 
+          background-size: cover;
+          background-repeat: no-repeat;
+           
+        }
+        &-2{
+            background-image: url('../../assets/person6.jpg');
+            background-position: center center; 
+          background-size: cover;
+          background-repeat: no-repeat; 
+        }
+        &-3{
+            background-image: url('../../assets/people.jpg'); 
+            background-position: center center; 
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        &-4{
+            background-image: url('../../assets/person4.jpg'); 
+            background-position: center center; 
+          background-size: cover;
+          background-repeat: no-repeat; 
+        }
+    }
+}
+.campus__card{
+    border-radius: 1.5rem;
+    box-shadow:.1rem .2rem 1rem rgba(164, 164, 164, 0.678);
+    height:30vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+@media (max-width:580px){
+    .campus{
+        .campus__image{
+            display:flex;
+            gap:3rem;
+            flex-direction:row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top:4.5rem;
+        }
+    }
+    .campus__card{
+        flex:none;
+        height:38vw;
+        width:40%; 
+    }
+}
